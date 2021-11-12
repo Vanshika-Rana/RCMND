@@ -4,6 +4,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import sigmoid_kernel
 
+st.set_page_config(page_title='RCMND: K-Drama Recommendation System', page_icon='./favicon.png')
 drama_df = pd.read_csv("./kdrama.csv")
 tfv = TfidfVectorizer(min_df=3, max_features=None,
                       strip_accents='unicode', analyzer='word', token_pattern=r'\w{1,}',
